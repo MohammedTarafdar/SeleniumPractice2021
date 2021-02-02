@@ -32,9 +32,9 @@ public class WebDriverBasic {
 		String currentUrl = driver.getCurrentUrl();
 		System.out.println("Our current URL is : " + currentUrl);
 		
-		//driver.close();  	// to close the focus window
+		driver.close();  	// to close the focus window
 		
-		//driver.quit(); 		// to close all the open window related with driver
+		driver.quit(); 		// to close all the open window related with driver
 		
 		
 		
