@@ -14,8 +14,10 @@ public class CrossBrowser {
 		
 		CrossBrowser browser = new CrossBrowser();
 		browser.initDriver("chrome");
+		
 		//WebDriver driver = browser.initDriver("chrome");
 		//driver.get("https://www.google.com");
+		
 		browser.launchURL("https://www.google.com");
 		String pageTitle = browser.getCurrentPageTitle();
 		
