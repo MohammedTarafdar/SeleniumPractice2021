@@ -1,6 +1,8 @@
 package com.selenium.basic;
 
 import java.time.Month;
+import java.util.Iterator;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -24,8 +26,37 @@ public class SelectClassConcept {
 		driver.manage().window().maximize();
 		
 		driver.get("https://www.facebook.com/");
-		driver.findElement(By.id("u_0_2")).click();
 		
+		
+		driver.findElement(By.id("u_0_2")).click();
+		//driver.findElement(By.id("u_1_b")).sendKeys("Mohammed");
+		//driver.findElement(By.name("firstname")).sendKeys("Mohammed");
+		
+		
+		
+		String parentWindow = driver.getWindowHandle();
+		Set<String> allWindows = driver.getWindowHandles();
+		Iterator<String> iterator = allWindows.iterator();
+		
+		while(iterator.hasNext()) {
+			String childWindow =iterator.next();
+			if(!parentWindow.equalsIgnoreCase(childWindow)) {
+				driver.switchTo().window(childWindow);
+				WebElement heading = driver.findElement(By.xpath("(//*[text()=\"Sign Up\"])[2]"));
+				String headingValue = heading.getText();
+				System.out.println("Child page heading is : " + headingValue);
+				
+				//driver.findElement(By.name("firstname")).sendKeys("Mohammed");
+				
+				
+				
+				
+			}
+		}
+		
+		
+		
+		/*
 		// for parent
 		String parentID = driver.getWindowHandle();
 		System.out.println("parent ID : " + parentID);
@@ -52,7 +83,7 @@ public class SelectClassConcept {
 		
 		driver.quit();
 		
-		
+		*/
 
 	}
 	
