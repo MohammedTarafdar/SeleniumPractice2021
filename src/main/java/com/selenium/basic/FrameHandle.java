@@ -1,12 +1,13 @@
 package com.selenium.basic;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import okhttp3.internal.http2.Header;
 
 public class FrameHandle {
 
@@ -15,12 +16,31 @@ public class FrameHandle {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
-		
+
 		driver.get("http://www.londonfreelance.org/cources/frames/index.html");
-		driver.switchTo().frame(2);
-		//driver.switchTo().frame("main");
-		WebElement header = driver.findElement(By.xpath("//h2[text()='Title bar']"));
-		System.out.println(header.getText());
+
+		// how many frame is there?
+		List<WebElement> frameList = driver.findElements(By.tagName("frame"));
+		System.out.println("Total number of frame is : " + frameList.size());
+		
+		if (frameList.size() > 0) {
+			// driver.switchTo().frame(2); // by index
+			// driver.switchTo().frame("main"); // by id/name
+			driver.switchTo().frame(driver.findElement(By.name("main")));
+
+			WebElement header = driver.findElement(By.xpath("//h2[text()='Title bar ']"));
+			System.out.println(header.getText());
+			
+			// to come back to main page
+			driver.switchTo().defaultContent();
+			// new
+			// driver.switchTo().parentFrame();
+		}
+		else {
+			System.out.println("There is no frame in this page.");
+		}
+
+		
 
 	}
 
