@@ -1,12 +1,11 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="TestNG Framework for Test Automation">
-	<test name="testNG Test">
-		<classes>
-			<class name="com.testNg.practice.DependsOnAnnotation" />
-			<class name="com.testNg.practice.GoogleTitleTest" />
-			<class name="com.testNg.practice.GroupsAnnotation" />
-			<class name="com.testNg.practice.PriorityAnnotation" />
-			
-		</classes>
-	</test>
-</suite>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.testNG.practice.TestNGBasic"/>
+      <class name="com.testNG.practice.GoogleTitleTest"/>
+      <class name="com.testNG.practice.GroupsAnnotation"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
