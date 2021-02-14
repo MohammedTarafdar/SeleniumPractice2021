@@ -1,35 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [TestNG Framework for Test Automation]">
-  <test thread-count="5" name="testNG Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testNG.practice.GoogleTitleTest">
+      <class name="com.testNG.parameters.DataProviderTest">
         <methods>
-          <include name="setUp"/>
-          <include name="googlePageTitleTest"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.testNG.practice.GoogleTitleTest -->
-      <class name="com.testNG.practice.ExpectedExceptionAnnotation">
-        <methods>
-          <include name="exceptionTestOne"/>
-        </methods>
-      </class> <!-- com.testNG.practice.ExpectedExceptionAnnotation -->
-      <class name="com.testNG.practice.GoogleHomePageTest">
-        <methods>
+          <include name="createAccountWithDataTest"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="GoogleLogoTest"/>
         </methods>
-      </class> <!-- com.testNG.practice.GoogleHomePageTest -->
-      <class name="com.testNG.practice.DependsOnAnnotation">
-        <methods>
-          <include name="homePage"/>
-          <include name="logOut"/>
-          <include name="logIn"/>
-          <include name="cartPageTest"/>
-        </methods>
-      </class> <!-- com.testNG.practice.DependsOnAnnotation -->
+      </class> <!-- com.testNG.parameters.DataProviderTest -->
     </classes>
-  </test> <!-- testNG Test(failed) -->
-</suite> <!-- Failed suite [TestNG Framework for Test Automation] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

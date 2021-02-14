@@ -2,38 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Yahoo App Test Automation Suite" duration-ms="18185" started-at="2021-02-12T22:56:37 EST" finished-at="2021-02-12T22:56:55 EST">
+  <suite name="Default suite" duration-ms="14029" started-at="2021-02-13T23:01:18 EST" finished-at="2021-02-13T23:01:33 EST">
     <groups>
     </groups>
-    <test name="Yahoo App Test" duration-ms="18185" started-at="2021-02-12T22:56:37 EST" finished-at="2021-02-12T22:56:55 EST">
-      <class name="com.testNG.parameters.ParameterTest">
-        <test-method status="PASS" signature="yahooLoginTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.testNG.parameters.ParameterTest@2d6eabae]" name="yahooLoginTest" duration-ms="18151" started-at="2021-02-12T22:56:37 EST" finished-at="2021-02-12T22:56:55 EST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://www.yahoo.com/]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[ashik_mart@yahoo.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Mart1996]]>
-              </value>
-            </param>
-          </params>
+    <test name="Default test" duration-ms="14029" started-at="2021-02-13T23:01:18 EST" finished-at="2021-02-13T23:01:33 EST">
+      <class name="com.testNG.parameters.DataProviderTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.testNG.parameters.DataProviderTest@6895a785]" name="setUp" is-config="true" duration-ms="6201" started-at="2021-02-13T23:01:19 EST" finished-at="2021-02-13T23:01:25 EST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- yahooLoginTest -->
-      </class> <!-- com.testNG.parameters.ParameterTest -->
-    </test> <!-- Yahoo App Test -->
-  </suite> <!-- Yahoo App Test Automation Suite -->
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="createAccountWithDataTest()[pri:0, instance:com.testNG.parameters.DataProviderTest@6895a785]" name="createAccountWithDataTest" duration-ms="2687" started-at="2021-02-13T23:01:25 EST" finished-at="2021-02-13T23:01:27 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createAccountWithDataTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.testNG.parameters.DataProviderTest@6895a785]" name="tearDown" is-config="true" duration-ms="5110" started-at="2021-02-13T23:01:27 EST" finished-at="2021-02-13T23:01:33 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.testNG.parameters.DataProviderTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

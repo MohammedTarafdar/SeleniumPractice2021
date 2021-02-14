@@ -3,7 +3,7 @@
 <suite name="Yahoo App Test Automation Suite">
   <test name="Yahoo App Test">
   	
-  	<parameter name="browser" value="firefox"/>
+  	<parameter name="browser" value="chrome"/>
   
   	<parameter name="url" value="https://www.yahoo.com/"/>
   	<parameter name="emailID" value="ashik_mart@yahoo.com"/>
@@ -12,6 +12,7 @@
   
     <classes>
       <class name="com.testNG.parameters.ParameterTest"/>
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
